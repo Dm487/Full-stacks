@@ -1,0 +1,260 @@
+css
+/* Base Styles */
+body {
+    background-color: #ffffff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header & Nav */
+.zra-blue-header {
+    background-color: #005696;
+    padding: 20px 0; /* Increased padding for better spacing */
+}
+
+/* NEW: Custom wrapper just for the blue header to center everything */
+.zra-blue-header .content-wrapper {
+    display: flex;
+    flex-direction: column; /* Stack logo on top of links */
+    justify-content: center;
+    align-items: center;    /* This centers everything */
+    width: 100%;            /* Ensure it takes full width to center properly */
+    gap: 15px;              /* Space between the logo and the text links */
+}
+
+.zra-gold-nav {
+    background-color: #c5a368;
+    padding: 12px 0;
+}
+
+.content-wrapper {
+    width: 85%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* UPDATED: Increased the logo size */
+.main-logo {
+    height: 90px; /* Changed from 60px to 90px to make it bigger */
+    width: auto;
+}
+
+/* UPDATED: Centered the top nav links */
+.top-nav-links {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.top-nav-links span {
+    color: white;
+    font-size: 13px;
+    margin: 0 15px; /* Equal margin on left and right for perfect centering */
+    cursor: pointer;
+}
+
+.nav-items span {
+    color: white;
+    font-size: 13px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+/* Calculator Card */
+.calculator-container {
+    background: white;
+    width: 600px;
+    margin: 50px auto;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.card-title {
+    background: #f5f5f5;
+    padding: 25px;
+    font-size: 28px;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+}
+
+.calculator-body {
+    padding: 30px;
+}
+
+.input-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.input-row label {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.input-row input {
+    width: 60%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.display-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    font-size: 14px;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.separator {
+    border: 0;
+    border-top: 1px solid #eee;
+    margin: 15px 0;
+}
+
+.net-salary-box {
+    background: #eeeeee;
+    padding: 20px;
+    font-weight: bold;
+    font-size: 24px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+/* Computation Table */
+.bands-section {
+    padding: 0 30px;
+}
+
+.bands-header {
+    text-align: center;
+    font-weight: bold;
+    font-size: 12px;
+    margin-bottom: 15px;
+}
+
+.bands-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+}
+
+.bands-table th, .bands-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+.note-text {
+    font-size: 12px;
+    margin-top: 10px;
+    color: #333;
+}
+
+/* Buttons */
+.button-container {
+    text-align: center;
+    padding: 30px 0;
+}
+
+.btn-calculate, .btn-clear {
+    background: #337ab7;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: bold;
+    margin: 0 10px;
+}
+
+/* Footer Section */
+.zra-blue-footer {
+    background-color: #005696;
+    color: white;
+    padding: 50px 0;
+    margin-top: 50px;
+}
+
+.footer-wrapper {
+    width: 85%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-col {
+    width: 30%;
+}
+
+.footer-line {
+    border-top: 1px solid rgba(255,255,255,0.2);
+    margin: 10px 0 20px 0;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-col li, .footer-col p {
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+
+.social-circles span {
+    background: rgba(255,255,255,0.1);
+    padding: 10px 15px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.copyright-section {
+    background: white;
+    padding: 20px 0;
+    font-size: 12px;
+    text-align: center;
+}
+
+/* ZED Bot Launcher Styles */
+.zra-bot-launcher {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #0068a9; /* Official ZRA Blue */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    z-index: 1000;
+    transition: transform 0.3s ease;
+}
+
+.zra-bot-launcher:hover {
+    transform: scale(1.05);
+}
+
+.zra-bot-launcher-text {
+    font-weight: bold;
+    margin-right: 10px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.zra-bot-launcher-icon img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+}

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZRA PAYE Calculator Clone</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="zra-blue-header">
+        <div class="content-wrapper">
+            <img src="./image/logo.png" alt="ZRA Logo" class="main-logo">
+            
+            <nav class="top-nav-links">
+                <span>About Us</span>
+                <span>Tax Payer Charter</span>
+                <span>Tenders</span>
+                <span>Careers</span>
+                <span>Tutorials</span>
+                <span>Contact Us</span>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="zra-gold-nav">
+        <div class="content-wrapper">
+            <div class="nav-items">
+                <span>HOME</span>
+                <span>REGISTRATIONS</span>
+                <span>BUSINESS</span>
+                <span>CUSTOMS</span>
+                <span>PUBLICATIONS</span>
+                <span>STATISTICS</span>
+                <span>TAX PORTAL</span>
+                <span>TAX TOOLS</span>
+            </div>
+        </div>
+    </nav>
+
+    <main class="calculator-container">
+        <div class="card-title">Paye Calculator </div>
+        
+        <div class="calculator-body">
+            <div class="input-row">
+                <label>Basic Pay</label>
+                <input type="number" id="basic_salary" onkeydown="focusNext(event)" placeholder="Enter Salary">
+            </div>
+
+            <div class="input-row">
+                <label>Allowances</label>
+                <input type="number" id="house_allowance" onkeydown="focusNext(event)" placeholder="Enter allowances">
+            </div>
+
+            <div class="display-row">
+                <span>Gross/Taxable Pay</span>
+                <span id="gross_pay">K 0</span>
+            </div>
+
+            <div class="input-row">
+                <label>Statutory Contribution</label>
+                <input type="number" id="statutory_contribution" onkeydown="focusNext(event)" placeholder="Enter contributions">
+            </div>
+
+            <div class="display-row">
+                <span>Napsa 5%</span> 
+                <span id="napsa">K 0</span>
+            </div>
+
+            <div class="display-row">
+                <span>National Health Insurance</span> 
+                <span id="insurance">K 0</span>
+            </div>
+            
+            <hr class="separator">
+            
+            <div class="display-row bold">
+                <span>Total Contributions</span> 
+                <span id="total_contributions">K 0</span>
+            </div>
+
+            <div class="display-row bold">
+                <span>Total Tax Deductions</span> 
+                <span id="total_tax_deductions">K 0</span>
+            </div>
+
+            <div class="display-row bold">
+                <span>Total Deductions</span> 
+                <span id="total_deductions">K 0</span>
+            </div>
+
+            <div class="net-salary-box">
+                <span>Net Salary</span>
+                <span id="net_salary">K 0</span>
+            </div>
+            <p id="errorname" style="color:red; font-size:12px; text-align:center;"></p>
+        </div>
+
+        <div class="bands-section">
+            <p class="bands-header">PAYE TAX COMPUTATION BANDS 2026</p>
+            <table class="bands-table">
+                <thead>
+                    <tr>
+                        <th>Tax Bands</th>
+                        <th>Chargeable Income</th>
+                        <th>Tax Due</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>First K5,100.00 = 0%</td>
+                        <td id="band1">0.00</td>
+                        <td id="first_band">0.00</td>
+                    </tr>
+                    <tr>
+                        <td>Next K2,000.00 = 20%</td>
+                        <td id="band2">0.00</td>
+                        <td id="second_band">0.00</td>
+                    </tr>
+                    <tr>
+                        <td>Next K2,100.00 = 31%</td>
+                        <td id="band3">0.00</td>
+                        <td id="third_band">0.00</td>
+                    </tr>
+                    <tr>
+                        <td>Above K9,200.00 = 37%</td>
+                        <td id="band4">0.00</td>
+                        <td id="fourth_band">0.00</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="note-text">Note: Gross pay shows the tax band category used to calculate your tax</p>
+        </div>
+
+        <div class="button-container">
+            <button id="submit_button" class="btn-calculate">Calculate Now</button>
+            <button class="btn-clear" onclick="resetCalculator()">Reset</button>
+        </div>
+    </main>
+
+    <footer class="zra-blue-footer">
+        <div class="footer-wrapper">
+            <div class="footer-col">
+                <h3>CONTACT US</h3>
+                <div class="footer-line"></div>
+               
+            </div>
+            <div class="footer-col">
+                <h3>OTHER LINKS</h3>
+                <div class="footer-line"></div>
+                <ul>
+                    <li>National Pension Scheme Authority</li>
+                    <li>Bank of Zambia (BOZ)</li>
+                    <li>Ministry of Finance</li>
+                    <li>Zambia Trade Portal</li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>SOCIAL MEDIA</h3>
+                <div class="footer-line"></div>
+                <div class="social-circles">
+                    <span>f</span> <span>t</span> 
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="copyright-section">
+        <div class="content-wrapper">
+            <span>© <span id="footer_year"></span> Zambia Revenue Authority. All rights reserved</span>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+    
+</body>
+</html>
