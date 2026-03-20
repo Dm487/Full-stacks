@@ -7,12 +7,13 @@
 
 body {
   min-height: 100vh;
-  background: linear-gradient(135deg, #eef3f9, #dfe9f6);
+  background-color: #6f729e;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 20px;
 }
+
 
 .container {
   width: 100%;
