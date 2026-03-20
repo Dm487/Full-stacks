@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Translation Web App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="translator-card">
+      <div class="top-controls">
+        <select id="fromLang">
+          <option value="auto">Detect Language</option>
+          <option value="en" selected>English</option>
+          <option value="fr">French</option>
+        </select>
+
+        <button id="swapBtn" class="swap-btn" title="Swap Languages">⇄</button>
+
+        <select id="toLang">
+          <option value="en">English</option>
+          <option value="fr" selected>French</option>
+        </select>
+      </div>
+
+      <div class="boxes">
+        <div class="box">
+          <label for="inputText">Input</label>
+          <textarea
+            id="inputText"
+            maxlength="500"
+            placeholder="Enter text to translate..."
+          >Hello, how are you</textarea>
+
+          <div class="box-footer">
+            <div class="actions">
+              <button id="listenInput">🔊 Listen</button>
+              <button id="copyInput">📋 Copy</button>
+            </div>
+            <span id="charCount">19/500</span>
+          </div>
+        </div>
+
+        <div class="box">
+          <label for="outputText">Output</label>
+          <textarea
+            id="outputText"
+            readonly
+            placeholder="Translation will appear here..."
+          ></textarea>
+
+          <div class="box-footer">
+            <div class="actions">
+              <button id="listenOutput">🔊 Listen</button>
+              <button id="copyOutput">📋 Copy</button>
+            </div>
+            <span id="statusText">Ready</span>
+          </div>
+        </div>
+      </div>
+
+      <button id="translateBtn" class="translate-btn">Translate</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
